@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
+import OrderSound from "@/components/OrderSound";
 import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
@@ -29,6 +30,7 @@ export default function Home() {
         {/* HERO */}
         <Hero />
         <Partners />
+        <OrderSound />
 
         {/* SECTIONS */}
         <div className="content-container">
