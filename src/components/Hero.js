@@ -65,7 +65,7 @@ export default function Hero() {
             >
                 <motion.div
                     variants={itemVariants}
-                    className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-[10px] font-mono border rounded border-emerald-500/30 bg-emerald-500/5 backdrop-blur-sm text-emerald-400 uppercase tracking-widest"
+                    className="inline-flex items-center gap-2 px-0 py-1.5 mb-8 text-[10px] font-sans text-emerald-400 uppercase tracking-widest mt-4"
                 >
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span>Official Shopify Expert Partner</span>
@@ -122,11 +122,11 @@ export default function Hero() {
                 {/* Shopify Logo Section */}
                 <motion.div
                     style={{ scale: logoScale, opacity: logoOpacity, y: logoY }}
-                    className="relative z-10 flex flex-col items-center pb-24 w-full mt-24"
+                    className="relative z-10 flex flex-col items-center pb-24 w-full mt-48"
                 >
-                    <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-12 backdrop-blur-sm">
+                    <div className="inline-flex items-center gap-3 px-0 py-2 mb-12">
                         <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                        <span className="text-zinc-400 text-[10px] font-mono uppercase tracking-[0.2em]">Official_Shopify_Partner_Verified</span>
+                        <span className="text-zinc-500 text-[10px] font-sans uppercase tracking-[0.3em]">Official Shopify Partner Verified</span>
                     </div>
 
                     <div className="relative flex flex-col items-center">
@@ -134,13 +134,13 @@ export default function Hero() {
                             {revealed && (
                                 <motion.div
                                     initial={{ opacity: 0, y: 15, scale: 0.9 }}
-                                    animate={{ opacity: 1, y: -65, scale: 1 }}
-                                    className="absolute top-0 z-30 bg-[#1a1a1a] border border-emerald-500/50 text-emerald-400 text-[11px] font-mono px-5 py-2.5 rounded shadow-[0_10px_40px_rgba(0,0,0,0.5)] flex items-center gap-3 whitespace-nowrap uppercase tracking-wider"
+                                    animate={{ opacity: 1, y: -100, scale: 1 }}
+                                    className="absolute top-0 z-30 border border-emerald-500/30 text-emerald-400 text-[11px] font-mono px-5 py-2.5 rounded backdrop-blur-md flex items-center gap-3 whitespace-nowrap uppercase tracking-wider"
                                 >
                                     <div className="flex gap-1">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
-                                        <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 shadow-[0_0_10px_rgba(234,179,8,0.5)]" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
                                     </div>
                                     <span className="border-l border-white/10 pl-3">New Sale Received!</span>
                                 </motion.div>

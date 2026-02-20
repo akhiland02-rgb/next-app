@@ -45,8 +45,8 @@ export default function Header() {
                             setMobileMenuOpen(false);
                         }}
                     >
-                        <div className="w-10 h-10 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-black transition-all duration-300">
-                            <Terminal size={20} />
+                        <div className="w-10 h-10 flex items-center justify-center text-emerald-500 mt-1">
+                            <Terminal size={24} />
                         </div>
                         <div className="flex flex-col">
                             <h1 className="text-xl font-mono font-bold tracking-tighter text-white leading-none">
