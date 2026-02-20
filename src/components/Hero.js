@@ -63,12 +63,12 @@ export default function Hero() {
             <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-emerald-500/[0.02] to-transparent pointer-events-none" />
 
             <motion.div
-                className="relative z-20 flex flex-col lg:flex-row items-center lg:items-start justify-between max-w-7xl mx-auto px-6 gap-12 lg:gap-20"
+                className="relative z-20 flex flex-col items-center text-center max-w-5xl mx-auto px-6"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
             >
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
+                <div className="flex flex-col items-center">
                     <motion.div
                         variants={itemVariants}
                         className="inline-flex items-center gap-2 px-0 py-1.5 mb-8 text-[10px] font-sans text-emerald-400 uppercase tracking-widest mt-4"
@@ -81,59 +81,70 @@ export default function Hero() {
                         variants={itemVariants}
                         className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-8 leading-[1.1] text-white"
                     >
-                        Scale Your Brand with <br />
-                        <span className="text-emerald-500 italic">High-Performance Shopify PWAs</span>
+                        Kerala&apos;s No.1 Experts for <br />
+                        <span className="text-emerald-500 italic font-sans">High-Performance Shopify Brands</span>
                     </motion.h1>
 
                     <motion.p
                         variants={itemVariants}
                         className="text-base md:text-xl text-zinc-400 mb-12 max-w-2xl leading-relaxed font-sans px-4"
                     >
-                        We build lightning-fast, app-like Shopify experiences that turn casual browsers into loyal customers. No jargon, just <span className="text-emerald-400/80 font-mono text-sm tracking-widest uppercase">high-converting_results</span>.
+                        We build conversion-focused stores that scale. Partner with Enteecom for expert Shopify solutions designed for growth.
                     </motion.p>
 
-                    {/* Stats Row */}
-                    <motion.div variants={itemVariants} className="flex flex-wrap justify-center lg:justify-start items-center gap-8 md:gap-12 mb-20 w-full font-mono">
-                        <div className="flex flex-col items-center lg:items-start group">
-                            <div className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-none group-hover:text-emerald-400 transition-colors">20+</div>
-                            <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2 px-2 py-0.5 border border-white/5 rounded">Projects</div>
-                        </div>
-                        <div className="hidden sm:block text-emerald-900/50 opacity-30">|</div>
-                        <div className="flex flex-col items-center lg:items-start group">
-                            <div className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-none group-hover:text-emerald-400 transition-colors">2Cr+</div>
-                            <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2 px-2 py-0.5 border border-white/5 rounded">Revenue</div>
-                        </div>
-                        <div className="hidden sm:block text-emerald-900/50 opacity-30">|</div>
-                        <div className="flex flex-col items-center lg:items-start group">
-                            <div className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-none group-hover:text-emerald-400 transition-colors">100%</div>
-                            <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2 px-2 py-0.5 border border-white/5 rounded">Success</div>
+                    <motion.div
+                        variants={itemVariants}
+                        className="flex items-center gap-6 mb-12 opacity-40 grayscale hover:grayscale-0 transition-all"
+                    >
+                        <span className="text-[10px] uppercase tracking-[0.3em] font-mono text-zinc-500">Trusted_By:</span>
+                        <div className="flex gap-4 items-center">
+                            <span className="text-[10px] font-bold text-zinc-400">50+ BRANDS</span>
+                            <div className="w-1 h-1 rounded-full bg-zinc-700" />
+                            <span className="text-[10px] font-bold text-zinc-400">100% SUCCESS</span>
                         </div>
                     </motion.div>
 
-                    {/* BUTTONS */}
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 items-center lg:justify-start justify-center mb-12 lg:mb-20 w-full font-mono uppercase tracking-[0.2em] text-[11px]">
+                    {/* Stats Row - Centered */}
+                    <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-8 md:gap-16 mb-20 w-full font-mono">
+                        <div className="flex flex-col items-center group">
+                            <div className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-none group-hover:text-emerald-400 transition-colors">20+</div>
+                            <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2 px-2 py-0.5 border border-white/5 rounded">Successful_Stores</div>
+                        </div>
+                        <div className="hidden sm:block text-emerald-900/50 opacity-30">|</div>
+                        <div className="flex flex-col items-center group">
+                            <div className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-none group-hover:text-emerald-400 transition-colors">2Cr+</div>
+                            <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2 px-2 py-0.5 border border-white/5 rounded">Sales_Generated</div>
+                        </div>
+                        <div className="hidden sm:block text-emerald-900/50 opacity-30">|</div>
+                        <div className="flex flex-col items-center group">
+                            <div className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-none group-hover:text-emerald-400 transition-colors">100%</div>
+                            <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2 px-2 py-0.5 border border-white/5 rounded">Client_Retention</div>
+                        </div>
+                    </motion.div>
+
+                    {/* SINGLE FOCUSED CTA */}
+                    <motion.div variants={itemVariants} className="flex flex-col items-center gap-6 justify-center mb-32 w-full font-mono uppercase tracking-[0.3em] text-[11px]">
                         <Magnetic>
-                            <button className="group relative flex items-center justify-center gap-3 px-10 py-5 bg-emerald-500 text-black font-bold rounded shadow-[0_10px_30px_rgba(16,185,129,0.3)] hover:scale-105 transition-all min-h-[60px] min-w-[300px]">
-                                <span>[EXECUTE_FREE_STRATEGY_CALL]</span>
-                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                            <button className="group relative flex items-center justify-center gap-4 px-12 py-6 bg-transparent text-emerald-500 font-bold border-2 border-emerald-500 rounded shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:bg-emerald-500 hover:text-black hover:shadow-[0_0_40px_rgba(16,185,129,0.4)] transition-all min-h-[64px] min-w-[320px]">
+                                <span>{">"} START_PROJECT()</span>
+                                <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
                             </button>
                         </Magnetic>
-
-                        <button className="flex items-center justify-center gap-3 px-10 py-5 bg-transparent text-emerald-500/60 font-medium rounded border border-emerald-500/20 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all min-h-[60px] min-w-[200px]">
-                            <span>view_portfolio</span>
-                            <ChevronRight size={18} className="opacity-50" />
-                        </button>
+                        <div className="text-zinc-600 text-[9px] tracking-[0.4em] flex items-center gap-3">
+                            <div className="w-1 h-1 rounded-full bg-emerald-500 animate-ping" />
+                            Available for 2 new projects this month
+                        </div>
                     </motion.div>
                 </div>
 
-                {/* Shopify Logo Section - Moves to Right on Desktop */}
+                {/* Shopify Logo Section - Centered Below Text */}
                 <motion.div
                     style={{ scale: logoScale, opacity: logoOpacity, y: logoY }}
-                    className="relative z-10 flex flex-col items-center lg:items-end lg:w-1/3 w-full lg:mt-32 mt-0 pb-24"
+                    className="relative z-10 flex flex-col items-center pb-24 w-full mt-12"
                 >
-                    <div className="inline-flex items-center gap-3 px-0 py-2 mb-12">
+                    <div className="inline-flex items-center gap-3 px-4 py-2 border border-white/5 rounded-full mb-12 bg-white/5">
                         <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                        <span className="text-zinc-500 text-[10px] font-sans uppercase tracking-[0.3em] text-right">Official Shopify Partner Verified</span>
+                        <span className="text-zinc-500 text-[10px] font-mono uppercase tracking-[0.2em]">Verified Shopify Expert Partner</span>
                     </div>
 
                     <div className="relative flex flex-col items-center">
@@ -149,7 +160,7 @@ export default function Hero() {
                                         <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 shadow-[0_0_10px_rgba(234,179,8,0.5)]" />
                                         <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
                                     </div>
-                                    <span className="border-l border-white/10 pl-3">New Sale Received!</span>
+                                    <span className="border-l border-white/10 pl-3">Order Received!</span>
                                 </motion.div>
                             )}
                         </AnimatePresence>
@@ -157,17 +168,16 @@ export default function Hero() {
                         <motion.div
                             animate={{
                                 filter: revealed ? "grayscale(0%) brightness(1.2)" : "grayscale(100%) brightness(50%)",
-                                scale: revealed ? 1.1 : 1
+                                opacity: 0.4
                             }}
-                            transition={{ duration: 0.8 }}
-                            className="relative"
+                            className="relative opacity-30"
                         >
                             <Image
                                 src="https://cdn.worldvectorlogo.com/logos/shopify.svg"
                                 alt="Shopify Logo"
                                 width={220}
                                 height={60}
-                                className="w-[180px] md:w-[260px] h-auto transition-all"
+                                className="w-[140px] md:w-[200px] h-auto transition-all grayscale brightness-[0.4]"
                             />
                         </motion.div>
                     </div>
