@@ -9,10 +9,15 @@ export default function OrderSound() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
 
+    useEffect(() => {
+        // Preload audio on mount
+        audioRef.current = new Audio("/assets/chaching.mp3");
+    }, []);
+
     const playSound = () => {
         if (audioRef.current) {
             audioRef.current.currentTime = 0;
-            audioRef.current.play();
+            audioRef.current.play().catch(err => console.error("Playback failed:", err));
             setIsPlaying(true);
             setShowSuccess(true);
             setTimeout(() => setIsPlaying(false), 1000);
@@ -22,7 +27,7 @@ export default function OrderSound() {
 
     return (
         <section className="w-full py-20 bg-emerald-500/[0.02] border-y border-emerald-500/10 relative overflow-hidden">
-            <audio ref={audioRef} src="https://cdn.pixabay.com/audio/2021/08/04/audio_06d318093d.mp3" preload="auto" />
+            {/* Removed the <audio> tag as we're using new Audio() */}
 
             <div className="absolute inset-0 opacity-5 pointer-events-none">
                 <div className="absolute top-10 left-10 font-mono text-[8px] text-emerald-500">
@@ -73,8 +78,8 @@ export default function OrderSound() {
                         <button
                             onClick={playSound}
                             className={`relative flex items-center justify-center gap-4 px-12 py-6 rounded font-mono font-bold uppercase tracking-widest text-sm transition-all duration-300 min-w-[280px] min-h-[64px] ${isPlaying
-                                    ? 'bg-emerald-400 text-black scale-95'
-                                    : 'bg-transparent text-emerald-500 border-2 border-emerald-500/30 hover:border-emerald-500 hover:bg-emerald-500/5 shadow-[0_0_20px_rgba(16,185,129,0.1)]'
+                                ? 'bg-emerald-400 text-black scale-95'
+                                : 'bg-transparent text-emerald-500 border-2 border-emerald-500/30 hover:border-emerald-500 hover:bg-emerald-500/5 shadow-[0_0_20px_rgba(16,185,129,0.1)]'
                                 }`}
                         >
                             <Play size={18} fill={isPlaying ? "currentColor" : "none"} />
