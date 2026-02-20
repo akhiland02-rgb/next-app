@@ -54,6 +54,11 @@ export default function Hero() {
         <section ref={containerRef} className="relative flex-center min-h-screen w-full text-white pt-32 pb-12 overflow-hidden">
             <audio ref={audioRef} src="https://cdn.pixabay.com/audio/2021/08/04/audio_341b18cc3b.mp3" preload="auto" />
 
+            {/* Tech-Layer: Matrix/Grid Overlay */}
+            <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+                style={{ backgroundImage: `linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px)`, backgroundSize: '40px 40px' }}
+            />
+
             {/* Simple Gradient Background */}
             <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-emerald-500/[0.02] to-transparent pointer-events-none" />
 
@@ -76,15 +81,15 @@ export default function Hero() {
                         variants={itemVariants}
                         className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-8 leading-[1.1] text-white"
                     >
-                        Build your Shopify store <br />
-                        <span className="text-emerald-500 italic">with Kerala&apos;s No.1 Experts</span>
+                        Scale Your Brand with <br />
+                        <span className="text-emerald-500 italic">High-Performance Shopify PWAs</span>
                     </motion.h1>
 
                     <motion.p
                         variants={itemVariants}
                         className="text-base md:text-xl text-zinc-400 mb-12 max-w-2xl leading-relaxed font-sans px-4"
                     >
-                        Partner with Akhil Anand at Enteecom to build a high-converting eCommerce store that grows with your business.
+                        We build lightning-fast, app-like Shopify experiences that turn casual browsers into loyal customers. No jargon, just <span className="text-emerald-400/80 font-mono text-sm tracking-widest uppercase">high-converting_results</span>.
                     </motion.p>
 
                     {/* Stats Row */}
@@ -106,16 +111,16 @@ export default function Hero() {
                     </motion.div>
 
                     {/* BUTTONS */}
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 items-center lg:justify-start justify-center mb-12 lg:mb-20 w-full">
+                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 items-center lg:justify-start justify-center mb-12 lg:mb-20 w-full font-mono uppercase tracking-[0.2em] text-[11px]">
                         <Magnetic>
-                            <button className="group relative flex items-center justify-center gap-3 px-10 py-5 bg-emerald-500 text-black font-sans font-bold rounded-lg shadow-[0_10px_30px_rgba(16,185,129,0.3)] hover:scale-105 transition-all text-sm min-h-[60px] min-w-[200px]">
-                                <span>Get Started Now</span>
+                            <button className="group relative flex items-center justify-center gap-3 px-10 py-5 bg-emerald-500 text-black font-bold rounded shadow-[0_10px_30px_rgba(16,185,129,0.3)] hover:scale-105 transition-all min-h-[60px] min-w-[300px]">
+                                <span>[EXECUTE_FREE_STRATEGY_CALL]</span>
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </button>
                         </Magnetic>
 
-                        <button className="flex items-center justify-center gap-3 px-10 py-5 bg-transparent text-white font-sans font-bold rounded-lg border border-white/20 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all text-sm min-h-[60px] min-w-[200px]">
-                            <span>View Portfolio</span>
+                        <button className="flex items-center justify-center gap-3 px-10 py-5 bg-transparent text-emerald-500/60 font-medium rounded border border-emerald-500/20 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all min-h-[60px] min-w-[200px]">
+                            <span>view_portfolio</span>
                             <ChevronRight size={18} className="opacity-50" />
                         </button>
                     </motion.div>
