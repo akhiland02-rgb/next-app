@@ -29,8 +29,6 @@ export default function Home() {
       <div className="relative z-10 flex flex-col w-full">
         {/* HERO */}
         <Hero />
-        <Partners />
-        <OrderSound />
 
         {/* SECTIONS */}
         <div className="content-container">
@@ -45,6 +43,12 @@ export default function Home() {
           </div>
           <div id="contact" className="section-gap">
             <Contact />
+          </div>
+          <div className="section-gap">
+            <Partners />
+          </div>
+          <div className="section-gap">
+            <OrderSound />
           </div>
         </div>
       </div>
