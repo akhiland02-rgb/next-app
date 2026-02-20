@@ -5,28 +5,28 @@ import { Clock, ShieldCheck, MonitorPlay, Layers, Terminal } from "lucide-react"
 
 const advantages = [
     {
-        title: "Fast_Delivery",
-        description: "Your high-converting store will be live in 15-20 business days. We prioritize speed without compromising on code quality.",
+        title: "Fast Turnaround",
+        description: "Your high-converting store will be live in 15-20 business days. We prioritize speed without compromising quality.",
         icon: <Clock className="w-6 h-6 text-emerald-400" />,
-        stat: "15-20 DAYS"
+        stat: "15-20 Days"
     },
     {
-        title: "Transparency",
-        description: "Fixed standard project cost of ₹25,000 for theme setup. No hidden fees or unexpected infrastructure costs.",
+        title: "Transparent Pricing",
+        description: "Fixed standard project cost of ₹25,000 for theme setup. No hidden fees or unexpected costs.",
         icon: <ShieldCheck className="w-6 h-6 text-emerald-500" />,
-        stat: "₹25,000"
+        stat: "Fixed ₹25k"
     },
     {
-        title: "Expert_Training",
-        description: "Includes a comprehensive 1:1 online training session to ensure you can manage your inventory and orders with ease.",
+        title: "Expert Training",
+        description: "Includes a comprehensive 1:1 online training session to ensure you can manage your store with confidence.",
         icon: <MonitorPlay className="w-6 h-6 text-emerald-600" />,
-        stat: "1:1 SESSION"
+        stat: "1:1 Support"
     },
     {
-        title: "Proven_Process",
+        title: "Proven Quality",
         description: "Up to 5 rounds of revisions included to ensure your store matches your brand identity perfectly.",
         icon: <Layers className="w-6 h-6 text-emerald-400" />,
-        stat: "5 REVISIONS"
+        stat: "5 Revisions"
     }
 ];
 
@@ -38,17 +38,17 @@ export default function Testimonials() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-emerald-500 text-[10px] font-mono font-bold tracking-[0.4em] uppercase mb-6"
+                    className="text-emerald-500 text-[10px] font-sans font-bold tracking-[0.4em] uppercase mb-6"
                 >
-                    [SYSTEM_ADVANTAGES]
+                    The Advantage
                 </motion.span>
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-3xl md:text-5xl font-mono font-bold max-w-2xl leading-tight tracking-tighter uppercase"
+                    className="text-3xl md:text-5xl font-sans font-bold max-w-2xl leading-tight tracking-tighter"
                 >
-                    Engineered for <span className="text-emerald-500 italic">Success.</span>
+                    Built for <span className="text-emerald-500 italic">Growth.</span>
                 </motion.h2>
             </div>
 
@@ -72,7 +72,7 @@ export default function Testimonials() {
                                 </span>
                             </div>
 
-                            <h3 className="text-lg font-mono font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors uppercase tracking-tight">
+                            <h3 className="text-xl font-sans font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors tracking-tight">
                                 {item.title}
                             </h3>
                             <p className="text-zinc-400 text-sm leading-relaxed font-sans font-medium">
@@ -81,9 +81,9 @@ export default function Testimonials() {
                         </div>
 
                         <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
-                            <div className="flex items-center gap-2 text-[10px] text-zinc-600 font-mono font-bold uppercase tracking-widest">
-                                <Terminal size={12} className="text-emerald-500/50" />
-                                <span>Module_Verified</span>
+                            <div className="flex items-center gap-2 text-[10px] text-emerald-500 font-sans font-bold uppercase tracking-widest">
+                                <ShieldCheck size={14} />
+                                <span>Verified Partner</span>
                             </div>
                             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                         </div>

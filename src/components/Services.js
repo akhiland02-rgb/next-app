@@ -6,40 +6,34 @@ import Magnetic from "./Magnetic";
 
 const services = [
     {
-        title: "Custom_Dev",
-        description: "Professional theme setup and mobile-responsive design.",
+        title: "Store Development",
+        description: "Professional theme setup and mobile-responsive design tailored to your brand.",
         icon: <Layout className="w-8 h-8 text-emerald-400" />,
-        cmd: "npm run build:theme"
     },
     {
-        title: "Inventory_Setup",
-        description: "Initial catalog setup for up to 30 products with optimized collections.",
+        title: "Product Catalog",
+        description: "Complete setup for up to 30 products with optimized collections and filters.",
         icon: <Puzzle className="w-8 h-8 text-emerald-500" />,
-        cmd: "import_catalog.csv"
     },
     {
-        title: "Payment_Logic",
-        description: "Secure integration with Razorpay, PayU, or Cashfree, plus custom shipping rules.",
+        title: "Payments & Shipping",
+        description: "Secure integration with major gateways plus custom shipping rules for your region.",
         icon: <Terminal className="w-8 h-8 text-emerald-600" />,
-        cmd: "api.connect(gateway)"
     },
     {
-        title: "Pixel_Track",
-        description: "Advanced setup for Meta Pixel (CAPI), Google Analytics (GA4), and Merchant Center.",
+        title: "Marketing & Analytics",
+        description: "Advanced setup for Meta Pixel, Google Analytics, and Merchant Center tracking.",
         icon: <Zap className="w-8 h-8 text-emerald-400" />,
-        cmd: "analytics.init()"
     },
     {
-        title: "SEO_Socials",
-        description: "Basic SEO optimization, sitemap submission, and Instagram/WhatsApp integration.",
+        title: "SEO & Social Media",
+        description: "Search engine optimization and direct Instagram/WhatsApp business integration.",
         icon: <Globe className="w-8 h-8 text-emerald-500" />,
-        cmd: "seo.optimize()"
     },
     {
-        title: "Auto_Mation",
-        description: "Abandoned cart recovery and email marketing app configurations.",
+        title: "Automation & Growth",
+        description: "Abandoned cart recovery and automated email marketing setup to boost sales.",
         icon: <Cpu className="w-8 h-8 text-emerald-600" />,
-        cmd: "cron.schedule()"
     },
 ];
 
@@ -62,21 +56,15 @@ function TiltCard({ service }) {
             }}
             onMouseLeave={() => { x.set(0); y.set(0); }}
             style={{ rotateY, rotateX, transformStyle: "preserve-3d" }}
-            className="relative h-full w-full bg-[#0a0a0a]/80 border border-white/10 p-6 flex flex-col justify-between backdrop-blur-md group hover:border-emerald-500/40 transition-all duration-300 font-mono"
+            className="relative h-full w-full bg-[#0a0a0a]/80 border border-white/10 rounded-xl p-8 flex flex-col justify-between backdrop-blur-md group hover:border-emerald-500/40 transition-all duration-300"
         >
-            {/* Terminal Header */}
-            <div className="absolute top-0 left-0 w-full h-8 border-b border-white/5 bg-white/5 flex items-center px-4 gap-2">
-                <div className="w-2 h-2 rounded-full bg-red-500/50" />
-                <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
-                <div className="w-2 h-2 rounded-full bg-green-500/50" />
-            </div>
 
-            <div style={{ transform: "translateZ(30px)" }} className="flex flex-col gap-4 mt-8">
-                <div className="flex items-center justify-between mb-2">
-                    <div className="p-3 w-fit rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+
+            <div style={{ transform: "translateZ(30px)" }} className="flex flex-col gap-4">
+                <div className="flex items-center justify-between mb-4">
+                    <div className="p-4 rounded-lg bg-emerald-500/10 text-emerald-400">
                         {service.icon}
                     </div>
-                    <span className="text-[9px] text-zinc-600 uppercase tracking-widest">{service.cmd}</span>
                 </div>
 
                 <h3 className="text-xl font-bold text-white tracking-tight leading-tight group-hover:text-emerald-400 transition-colors">
@@ -107,17 +95,17 @@ export default function Services() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-emerald-500 text-[10px] font-mono font-bold tracking-[0.2em] uppercase mb-4"
+                    className="text-emerald-500 text-[10px] font-sans font-bold tracking-[0.2em] uppercase mb-4"
                 >
-                    &lt;Capabilities /&gt;
+                    Our Expertise
                 </motion.span>
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-3xl md:text-5xl font-mono font-bold text-white max-w-2xl leading-tight tracking-tighter"
+                    className="text-3xl md:text-5xl font-sans font-bold text-white max-w-2xl leading-tight tracking-tighter"
                 >
-                    Core_Modules
+                    Services We Provide
                 </motion.h2>
             </div>
 

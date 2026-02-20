@@ -54,19 +54,8 @@ export default function Hero() {
         <section ref={containerRef} className="relative flex-center min-h-screen w-full text-white pt-32 pb-12 overflow-hidden">
             <audio ref={audioRef} src="https://cdn.pixabay.com/audio/2021/08/04/audio_341b18cc3b.mp3" preload="auto" />
 
-            {/* Code Background Overlay */}
-            <div className="absolute inset-0 z-0 opacity-20 pointer-events-none overflow-hidden font-mono text-[10px] text-emerald-900/40 select-none whitespace-pre p-4">
-                {`{% if shop.enabled %}
-  {% assign stress = 0 %}
-  {% assign revenue = "unlimited" %}
-  
-  {% for competitor in competitors %}
-     {{ competitor | remove: "market_share" }}
-  {% endfor %}
-
-  {% render 'enteecom-magic' %}
-{% endif %}`}
-            </div>
+            {/* Simple Gradient Background */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-emerald-500/[0.02] to-transparent pointer-events-none" />
 
             <motion.div
                 className="relative z-20 flex flex-col items-center text-center max-w-5xl px-6"
@@ -78,23 +67,23 @@ export default function Hero() {
                     variants={itemVariants}
                     className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-[10px] font-mono border rounded border-emerald-500/30 bg-emerald-500/5 backdrop-blur-sm text-emerald-400 uppercase tracking-widest"
                 >
-                    <Terminal size={12} />
-                    <span>SYS_STATUS: OPTIMAL_PARTNER</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Official Shopify Expert Partner</span>
                 </motion.div>
 
                 <motion.h1
                     variants={itemVariants}
-                    className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-8 leading-[1.1] bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60 font-mono"
+                    className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-8 leading-[1.1] text-white"
                 >
-                    Enteecom: Kerala&apos;s No.1 <br />
-                    <span className="text-emerald-500 italic">Shopify Development Experts</span>
+                    Build your Shopify store <br />
+                    <span className="text-emerald-500 italic">with Kerala&apos;s No.1 Experts</span>
                 </motion.h1>
 
                 <motion.p
                     variants={itemVariants}
                     className="text-base md:text-xl text-zinc-400 mb-12 max-w-2xl leading-relaxed font-sans px-4"
                 >
-                    Partner with Akhil Anand and the team at Enteecom to build your high-converting eCommerce store.
+                    Partner with Akhil Anand at Enteecom to build a high-converting eCommerce store that grows with your business.
                 </motion.p>
 
                 {/* Stats Row */}
@@ -118,15 +107,15 @@ export default function Hero() {
                 {/* BUTTONS */}
                 <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-48 w-full">
                     <Magnetic>
-                        <button className="group relative flex items-center justify-center gap-3 px-10 py-5 bg-emerald-500 text-black font-mono font-bold rounded shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:scale-105 transition-all uppercase tracking-widest text-xs min-h-[56px] min-w-[240px]">
-                            <span>Initialize_Launch()</span>
-                            <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                        <button className="group relative flex items-center justify-center gap-3 px-10 py-5 bg-emerald-500 text-black font-sans font-bold rounded-lg shadow-[0_10px_30px_rgba(16,185,129,0.3)] hover:scale-105 transition-all text-sm min-h-[60px] min-w-[240px]">
+                            <span>Get Started Now</span>
+                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </button>
                     </Magnetic>
 
-                    <button className="flex items-center justify-center gap-3 px-10 py-5 bg-transparent text-white font-mono font-bold rounded border border-white/20 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all uppercase tracking-widest text-xs min-h-[56px] min-w-[240px]">
-                        <span>view_source_code</span>
-                        <Terminal size={14} className="opacity-50" />
+                    <button className="flex items-center justify-center gap-3 px-10 py-5 bg-transparent text-white font-sans font-bold rounded-lg border border-white/20 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all text-sm min-h-[60px] min-w-[240px]">
+                        <span>View Portfolio</span>
+                        <ChevronRight size={18} className="opacity-50" />
                     </button>
                 </motion.div>
 
@@ -153,7 +142,7 @@ export default function Hero() {
                                         <div className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
                                         <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
                                     </div>
-                                    <span className="border-l border-white/10 pl-3">NEW_ORDER: #{1000 + orders}</span>
+                                    <span className="border-l border-white/10 pl-3">New Sale Received!</span>
                                 </motion.div>
                             )}
                         </AnimatePresence>

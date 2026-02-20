@@ -5,10 +5,10 @@ import { Phone, Menu, X, ChevronRight, Terminal, Globe } from "lucide-react";
 import Magnetic from "./Magnetic";
 
 const navLinks = [
-    { name: "// Home", href: "#home" },
-    { name: "// Services", href: "#services" },
-    { name: "// Results", href: "#portfolio" },
-    { name: "// Contact", href: "#contact" },
+    { name: "Home", href: "#home" },
+    { name: "Services", href: "#services" },
+    { name: "Results", href: "#portfolio" },
+    { name: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
@@ -35,7 +35,7 @@ export default function Header() {
             className={`fixed top-4 left-0 right-0 z-[100] transition-all duration-500 w-full px-4 md:px-6`}
         >
             <div className={`max-w-5xl mx-auto rounded-2xl border border-white/10 backdrop-blur-xl transition-all duration-300 ${scrolled ? 'bg-black/80 py-3 shadow-2xl' : 'bg-transparent py-4'}`}>
-                <div className="px-6 flex items-center justify-between">
+                <div className="px-6 flex items-center justify-between relative w-full">
 
                     {/* Logo - Tech Style */}
                     <div
@@ -50,9 +50,9 @@ export default function Header() {
                         </div>
                         <div className="flex flex-col">
                             <h1 className="text-xl font-mono font-bold tracking-tighter text-white leading-none">
-                                ENTEECOM<span className="text-emerald-500">_</span>
+                                ENTEECOM
                             </h1>
-                            <span className="text-[9px] font-sans text-zinc-500 tracking-wider uppercase mt-1">Shopify Development Architecture</span>
+                            <span className="text-[9px] font-sans text-zinc-500 tracking-wider uppercase mt-1">Expert Shopify Store Development & Growth</span>
                         </div>
                     </div>
 
@@ -76,8 +76,8 @@ export default function Header() {
                             7892393901
                         </a>
                         <Magnetic>
-                            <button className="px-5 py-2 bg-emerald-600/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-mono rounded hover:bg-emerald-500 hover:text-black transition-all uppercase tracking-widest">
-                                Init_Project()
+                            <button className="px-5 py-2 bg-emerald-500 text-black text-[10px] font-mono font-bold rounded hover:bg-emerald-400 transition-all uppercase tracking-widest shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                                Start Your Project
                             </button>
                         </Magnetic>
                     </div>

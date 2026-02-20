@@ -29,12 +29,11 @@ export default function Contact() {
                 >
                     <motion.div variants={itemVariants} className="space-y-8">
                         <div>
-                            <h2 className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-[0.4em] mb-4 flex items-center gap-2">
-                                <Terminal size={14} />
-                                [ESTABLISH_CONNECTION]
+                            <h2 className="text-emerald-500 text-[10px] font-bold uppercase tracking-[0.4em] mb-4">
+                                Contact Us
                             </h2>
-                            <h3 className="text-4xl md:text-5xl font-mono font-bold text-white tracking-tighter mb-6 uppercase">
-                                Ready to <span className="text-emerald-500 italic">Deploy?</span>
+                            <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-6">
+                                Ready to <span className="text-emerald-500 italic">Get Started?</span>
                             </h3>
                             <p className="text-zinc-400 font-sans leading-relaxed max-w-md">
                                 Send us your project requirements and our architecture team will get back to you within 24 hours. No strings attached.
@@ -43,22 +42,22 @@ export default function Contact() {
                     </motion.div>
 
                     <div className="grid grid-cols-1 gap-4 w-full max-w-sm">
-                        <motion.div variants={itemVariants} className="flex items-center gap-4 p-4 rounded border border-white/5 bg-white/5 hover:border-emerald-500/30 transition-all group cursor-pointer">
-                            <div className="text-emerald-500 group-hover:text-emerald-400">
-                                <Phone size={18} />
+                        <motion.div variants={itemVariants} className="flex items-center gap-4 p-5 rounded-xl border border-white/5 bg-white/5 hover:border-emerald-500/30 transition-all group cursor-pointer">
+                            <div className="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-black transition-all">
+                                <Phone size={20} />
                             </div>
                             <div className="text-left flex flex-col">
-                                <span className="text-[9px] text-zinc-500 uppercase tracking-widest leading-none mb-1">VOICE_CHANNEL_01</span>
+                                <span className="text-[10px] text-zinc-500 uppercase tracking-widest leading-none mb-1">Phone</span>
                                 <a href="tel:7892393901" className="text-lg font-bold hover:text-emerald-400 transition-colors">7892393901</a>
                             </div>
                         </motion.div>
 
-                        <motion.div variants={itemVariants} className="flex items-center gap-4 p-4 rounded border border-white/5 bg-white/5 hover:border-emerald-500/30 transition-all group cursor-pointer">
-                            <div className="text-emerald-500 group-hover:text-emerald-400">
-                                <Mail size={18} />
+                        <motion.div variants={itemVariants} className="flex items-center gap-4 p-5 rounded-xl border border-white/5 bg-white/5 hover:border-emerald-500/30 transition-all group cursor-pointer">
+                            <div className="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-black transition-all">
+                                <Mail size={20} />
                             </div>
                             <div className="text-left flex flex-col">
-                                <span className="text-[9px] text-zinc-500 uppercase tracking-widest leading-none mb-1">SMTP_SERVER_MAIN</span>
+                                <span className="text-[10px] text-zinc-500 uppercase tracking-widest leading-none mb-1">Email</span>
                                 <a href="mailto:shopify@enteecom.in" className="text-lg font-bold hover:text-emerald-400 transition-colors">shopify@enteecom.in</a>
                             </div>
                         </motion.div>
@@ -74,52 +73,45 @@ export default function Contact() {
                 >
                     <div className="relative w-full rounded bg-[#0a0a0a] border border-zinc-800 shadow-2xl overflow-hidden">
 
-                        {/* Terminal Bar */}
-                        <div className="bg-zinc-900 border-b border-zinc-800 p-2 flex items-center justify-between">
-                            <div className="flex gap-2">
-                                <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
-                                <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
-                                <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50" />
-                            </div>
-                            <div className="text-zinc-600 text-[10px] font-mono">user@enteecom:~/inquiry</div>
-                            <div className="w-4" />
+                        {/* Card Header */}
+                        <div className="bg-white/5 border-b border-white/10 p-4 flex items-center justify-between">
+                            <div className="text-zinc-500 text-[10px] font-mono uppercase tracking-widest">Inquiry Form</div>
                         </div>
 
-                        <div className="p-8 md:p-10 font-mono">
+                        <div className="p-8 md:p-10">
                             <form className="space-y-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase text-zinc-500 tracking-widest block">const client_name =</label>
+                                    <label className="text-[10px] uppercase text-zinc-500 tracking-widest block font-bold">Your Name</label>
                                     <input
                                         type="text"
-                                        placeholder='"John Doe"'
-                                        className="w-full bg-transparent border-b border-zinc-800 py-2 text-emerald-400 focus:outline-none focus:border-emerald-500 transition-all placeholder:text-zinc-700"
+                                        placeholder="Full Name"
+                                        className="w-full bg-transparent border-b border-zinc-800 py-3 text-white focus:outline-none focus:border-emerald-500 transition-all placeholder:text-zinc-700"
                                     />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase text-zinc-500 tracking-widest block">const email_address =</label>
+                                    <label className="text-[10px] uppercase text-zinc-500 tracking-widest block font-bold">Email Address</label>
                                     <input
                                         type="email"
-                                        placeholder='"john@example.com"'
-                                        className="w-full bg-transparent border-b border-zinc-800 py-2 text-emerald-400 focus:outline-none focus:border-emerald-500 transition-all placeholder:text-zinc-700"
+                                        placeholder="email@example.com"
+                                        className="w-full bg-transparent border-b border-zinc-800 py-3 text-white focus:outline-none focus:border-emerald-500 transition-all placeholder:text-zinc-700"
                                     />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase text-zinc-500 tracking-widest block">let function request_details() &#123;</label>
+                                    <label className="text-[10px] uppercase text-zinc-500 tracking-widest block font-bold">Project Details</label>
                                     <textarea
-                                        rows={3}
-                                        placeholder="  return &quot;We need...&quot;"
-                                        className="w-full bg-black/40 border border-white/10 rounded p-4 text-emerald-400 text-sm font-sans focus:outline-none focus:border-emerald-500/50 transition-colors placeholder:text-zinc-700"
+                                        rows={4}
+                                        placeholder="Tell us about your project or business needs..."
+                                        className="w-full bg-white/[0.03] border border-white/10 rounded-lg p-5 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-zinc-700"
                                     />
-                                    <label className="text-[10px] uppercase text-zinc-500 tracking-widest block">&#125;</label>
                                 </div>
 
                                 <div className="pt-6">
                                     <Magnetic>
-                                        <button className="w-full py-5 bg-emerald-500 text-black font-mono font-bold rounded flex items-center justify-center gap-3 group hover:scale-[1.02] transition-all uppercase tracking-widest text-xs min-h-[56px] shadow-[0_0_20px_rgba(16,185,129,0.2)]">
-                                            <span>Transmit_Request()</span>
-                                            <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                        <button className="w-full py-5 bg-emerald-500 text-black font-bold rounded-lg flex items-center justify-center gap-3 group hover:scale-[1.02] transition-all uppercase tracking-widest text-xs min-h-[60px] shadow-[0_10px_30px_rgba(16,185,129,0.3)]">
+                                            <span>Send Message</span>
+                                            <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                         </button>
                                     </Magnetic>
                                 </div>

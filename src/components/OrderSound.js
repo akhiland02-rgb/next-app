@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Bell, Terminal, Play, CheckCircle2 } from "lucide-react";
 import Magnetic from "./Magnetic";
@@ -30,11 +30,11 @@ export default function OrderSound() {
             {/* Removed the <audio> tag as we're using new Audio() */}
 
             <div className="absolute inset-0 opacity-5 pointer-events-none">
-                <div className="absolute top-10 left-10 font-mono text-[8px] text-emerald-500">
-                    {`>> EXEC_FUNCTION: Test_Order_Notification();`}
+                <div className="absolute top-10 left-10 font-sans text-[8px] text-emerald-500 uppercase tracking-widest">
+                    Ready to test
                 </div>
-                <div className="absolute bottom-10 right-10 font-mono text-[8px] text-emerald-500">
-                    {`>> STATUS: SUCCESS_RATE_100%`}
+                <div className="absolute bottom-10 right-10 font-sans text-[8px] text-emerald-500 uppercase tracking-widest text-right">
+                    Verified Checkout Experience
                 </div>
             </div>
 
@@ -45,13 +45,12 @@ export default function OrderSound() {
                     viewport={{ once: true }}
                     className="mb-8"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-[10px] font-mono font-bold uppercase tracking-widest mb-6">
-                        <Terminal size={12} />
-                        SPECIAL_FEATURE // ORDER_SOUND
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-[10px] font-sans font-bold uppercase tracking-widest mb-6">
+                        Test the Experience
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-mono font-bold text-white tracking-tighter mb-6 uppercase">
-                        Experience the sound your business <br />
-                        <span className="text-emerald-500 italic">will start hearing more often.</span>
+                    <h2 className="text-3xl md:text-5xl font-sans font-bold text-white tracking-tighter mb-6 uppercase">
+                        The sound your business <br />
+                        <span className="text-emerald-500 italic font-mono">will start hearing everyday.</span>
                     </h2>
                     <p className="text-zinc-500 font-sans max-w-xl mx-auto leading-relaxed">
                         Every successful deployment comes with the peace of mind that your infrastructure is optimized for conversions.
@@ -83,7 +82,7 @@ export default function OrderSound() {
                                 }`}
                         >
                             <Play size={18} fill={isPlaying ? "currentColor" : "none"} />
-                            <span>[ Play_ChaChing_Sound ]</span>
+                            <span>Play Checkout Sound</span>
 
                             {/* Scanning effect line */}
                             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-emerald-500/50 overflow-hidden">
@@ -98,12 +97,12 @@ export default function OrderSound() {
                 </div>
 
                 <div className="mt-12 flex items-center gap-8 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700">
-                    <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.3em]">
-                        Audio_Driver: 0x77_STABLE
+                    <div className="text-[10px] font-sans text-zinc-500 uppercase tracking-[0.3em]">
+                        High Fidelity Audio
                     </div>
                     <div className="w-1 h-1 rounded-full bg-zinc-700" />
-                    <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.3em]">
-                        Sample_Rate: 44.1kHz
+                    <div className="text-[10px] font-sans text-zinc-500 uppercase tracking-[0.3em]">
+                        Shopify Standard Release
                     </div>
                 </div>
             </div>

@@ -1,52 +1,52 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Check, Terminal, Package, ShoppingBag, Zap, Smartphone, WifiOff } from "lucide-react";
+import { Check, Terminal, Package, ShoppingBag, Zap, Smartphone, WifiOff, ArrowRight } from "lucide-react";
 import Magnetic from "./Magnetic";
 
 const plans = [
     {
-        name: "BASIC_INIT",
+        name: "Starter",
         price: "₹25,000",
-        description: "// perfect for startups",
+        description: "Perfect for new businesses",
         features: [
-            "Shopify Theme Setup",
-            "30 Products Upload",
-            "Payment & Shipping Config",
-            "Basic SEO & GA4 Setup",
+            "Shopify Store Setup",
+            "Up to 30 Products",
+            "Payment Gateway setup",
+            "Basic SEO configuration",
             "15-20 Days Delivery"
         ],
         highlight: false,
-        cmd: "npm start basic"
+        btnLabel: "Get Started"
     },
     {
-        name: "ADVANCED_CORE",
+        name: "Professional",
         price: "₹35,000",
-        description: "// for growing brands",
+        description: "Ideal for growing brands",
         features: [
-            "Everything in Basic",
-            "Premium Theme Support",
-            "Advanced SEO Setup",
-            "Meta CAPI Integration",
+            "Everything in Starter",
+            "Premium Theme Customization",
+            "Advanced SEO Optimization",
+            "Full Analytics Integration",
             "Priority Support Channel"
         ],
         highlight: true,
-        cmd: "npm run deploy:adv"
+        btnLabel: "Choose Growth"
     },
     {
-        name: "HYBRID_PWA",
+        name: "Enterprise PWA",
         price: "₹55,000",
-        description: "// native app-like ux",
+        description: "Mobile App-like Experience",
         features: [
-            "Everything in Advanced",
+            "Everything in Professional",
             "Progressive Web App (PWA)",
-            "Offline Access & Push Alerts",
-            "Home Screen Installation",
-            "Blazing Fast Page Speeds",
+            "Offline Access & Push Notifications",
+            "Direct App Icon on Mobile",
+            "Fastest Loading Speeds",
             "Enhanced Mobile Performance"
         ],
         highlight: false,
-        cmd: "npx create-pwa"
+        btnLabel: "Go Enterprise"
     }
 ];
 
@@ -58,17 +58,17 @@ export default function Pricing() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-emerald-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4"
+                    className="text-emerald-500 text-[10px] font-sans font-bold tracking-[0.2em] uppercase mb-4"
                 >
-                    &lt;Investment_Plans /&gt;
+                    Transparent Pricing
                 </motion.span>
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-3xl md:text-5xl font-bold max-w-2xl leading-tight tracking-tighter"
+                    className="text-3xl md:text-5xl font-sans font-bold max-w-2xl leading-tight tracking-tighter"
                 >
-                    Select_Module.
+                    Choose Your Growth Plan
                 </motion.h2>
             </div>
 
@@ -84,19 +84,18 @@ export default function Pricing() {
                     >
                         {plan.highlight && (
                             <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-emerald-500 text-black text-[10px] font-bold uppercase tracking-widest rounded-full">
-                                Recommended_Build
+                                Most Popular Plan
                             </div>
                         )}
 
                         <div className="mb-8 border-b border-white/5 pb-8">
                             <div className="flex items-center justify-between mb-4">
-                                <div className="px-3 py-1 rounded bg-white/5 border border-white/10 text-[10px] text-zinc-400 font-bold uppercase tracking-widest">
+                                <div className="px-3 py-1 rounded bg-emerald-500 text-black text-[10px] font-bold uppercase tracking-widest">
                                     {plan.name}
                                 </div>
-                                <Terminal size={14} className="text-zinc-600" />
                             </div>
-                            <h3 className="text-4xl font-bold text-white mb-2 tracking-tighter">{plan.price}</h3>
-                            <p className="text-emerald-500 text-xs italic font-mono uppercase tracking-widest">{plan.description}</p>
+                            <h3 className="text-4xl font-sans font-bold text-white mb-2 tracking-tighter">{plan.price}</h3>
+                            <p className="text-zinc-500 text-[11px] font-medium uppercase tracking-widest">{plan.description}</p>
                         </div>
 
                         <ul className="flex-1 space-y-4 mb-10">
@@ -109,9 +108,9 @@ export default function Pricing() {
                         </ul>
 
                         <Magnetic>
-                            <button className={`w-full py-5 border rounded text-xs font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 group/btn min-h-[56px] ${plan.highlight ? 'bg-emerald-500 text-black border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-transparent text-emerald-500 border-emerald-500/30 hover:bg-emerald-500/10'}`}>
-                                <span>{plan.cmd}</span>
-                                <div className="w-1.5 h-3 bg-current animate-pulse ml-1 opacity-50" />
+                            <button className={`w-full py-5 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 group/btn min-h-[60px] ${plan.highlight ? 'bg-emerald-500 text-black shadow-[0_10px_20px_rgba(16,185,129,0.2)]' : 'bg-transparent text-white border border-white/20 hover:border-emerald-500 hover:text-emerald-400'}`}>
+                                <span>{plan.btnLabel}</span>
+                                <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
                             </button>
                         </Magnetic>
 

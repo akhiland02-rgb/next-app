@@ -15,11 +15,11 @@ export default function Partners() {
     return (
         <section className="w-full py-20 bg-white/[0.02] border-y border-white/5 overflow-hidden">
             <div className="content-container mb-12 text-center">
-                <h2 className="text-[10px] font-mono font-bold text-emerald-500 uppercase tracking-[0.4em] mb-4">
-                    [ESTABLISHED_INFRASTRUCTURE]
+                <h2 className="text-[10px] font-sans font-bold text-emerald-500 uppercase tracking-[0.4em] mb-4">
+                    Our Trusted Partners
                 </h2>
-                <p className="text-2xl md:text-3xl font-mono font-bold text-white tracking-tighter">
-                    Trusted by forward-thinking brands
+                <p className="text-2xl md:text-3xl font-sans font-bold text-white tracking-tighter">
+                    Built for the world&apos;s leading brands
                 </p>
             </div>
 
