@@ -116,7 +116,7 @@ export default function Hero() {
                 </motion.div>
 
                 {/* BUTTONS */}
-                <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-36 w-full">
+                <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-48 w-full">
                     <Magnetic>
                         <button className="group relative flex items-center justify-center gap-3 px-10 py-5 bg-emerald-500 text-black font-mono font-bold rounded shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:scale-105 transition-all uppercase tracking-widest text-xs min-h-[56px] min-w-[240px]">
                             <span>Initialize_Launch()</span>
@@ -133,9 +133,9 @@ export default function Hero() {
                 {/* Shopify Logo Section */}
                 <motion.div
                     style={{ scale: logoScale, opacity: logoOpacity, y: logoY }}
-                    className="relative z-10 flex flex-col items-center pb-24 w-full mt-16"
+                    className="relative z-10 flex flex-col items-center pb-24 w-full mt-24"
                 >
-                    <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-10 backdrop-blur-sm">
+                    <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-12 backdrop-blur-sm">
                         <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                         <span className="text-zinc-400 text-[10px] font-mono uppercase tracking-[0.2em]">Official_Shopify_Partner_Verified</span>
                     </div>
@@ -145,7 +145,7 @@ export default function Hero() {
                             {revealed && (
                                 <motion.div
                                     initial={{ opacity: 0, y: 15, scale: 0.9 }}
-                                    animate={{ opacity: 1, y: -50, scale: 1 }}
+                                    animate={{ opacity: 1, y: -65, scale: 1 }}
                                     className="absolute top-0 z-30 bg-[#1a1a1a] border border-emerald-500/50 text-emerald-400 text-[11px] font-mono px-5 py-2.5 rounded shadow-[0_10px_40px_rgba(0,0,0,0.5)] flex items-center gap-3 whitespace-nowrap uppercase tracking-wider"
                                 >
                                     <div className="flex gap-1">
@@ -164,7 +164,7 @@ export default function Hero() {
                                 scale: revealed ? 1.1 : 1
                             }}
                             transition={{ duration: 0.8 }}
-                            className="relative px-12 py-6 bg-white/5 rounded-2xl border border-white/5 backdrop-blur-sm"
+                            className="relative"
                         >
                             <Image
                                 src="https://cdn.worldvectorlogo.com/logos/shopify.svg"
