@@ -36,13 +36,14 @@ const plans = [
     {
         name: "HYBRID_PWA",
         price: "₹55,000",
-        description: "// app-like experience",
+        description: "// native app-like ux",
         features: [
             "Everything in Advanced",
             "Progressive Web App (PWA)",
-            "Native App-like UI",
-            "Offline Access & Push",
-            "Blazing Fast Loads"
+            "Offline Access & Push Alerts",
+            "Home Screen Installation",
+            "Blazing Fast Page Speeds",
+            "Enhanced Mobile Performance"
         ],
         highlight: false,
         cmd: "npx create-pwa"
@@ -94,23 +95,23 @@ export default function Pricing() {
                                 </div>
                                 <Terminal size={14} className="text-zinc-600" />
                             </div>
-                            <h3 className="text-4xl font-bold text-white mb-2">{plan.price}</h3>
-                            <p className="text-emerald-500 text-xs italic">{plan.description}</p>
+                            <h3 className="text-4xl font-bold text-white mb-2 tracking-tighter">{plan.price}</h3>
+                            <p className="text-emerald-500 text-xs italic font-mono uppercase tracking-widest">{plan.description}</p>
                         </div>
 
-                        <ul className="flex-1 space-y-4 mb-8">
+                        <ul className="flex-1 space-y-4 mb-10">
                             {plan.features.map((feature, i) => (
-                                <li key={i} className="flex items-start gap-3 text-sm text-zinc-300">
-                                    <Check size={16} className={`mt-0.5 shrink-0 ${plan.highlight ? 'text-emerald-400' : 'text-zinc-600'}`} />
+                                <li key={i} className="flex items-start gap-3 text-sm text-zinc-400 font-sans leading-relaxed">
+                                    <Check size={16} className={`mt-1 shrink-0 ${plan.highlight ? 'text-emerald-400' : 'text-zinc-600'}`} />
                                     <span>{feature}</span>
                                 </li>
                             ))}
                         </ul>
 
                         <Magnetic>
-                            <button className={`w-full py-4 border rounded text-xs font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 group/btn ${plan.highlight ? 'bg-emerald-600 text-white border-emerald-500 hover:bg-emerald-500' : 'bg-transparent text-emerald-500 border-emerald-500/30 hover:bg-emerald-500/10'}`}>
+                            <button className={`w-full py-5 border rounded text-xs font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 group/btn min-h-[56px] ${plan.highlight ? 'bg-emerald-500 text-black border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-transparent text-emerald-500 border-emerald-500/30 hover:bg-emerald-500/10'}`}>
                                 <span>{plan.cmd}</span>
-                                <div className="w-2 h-4 bg-current animate-pulse ml-1 opacity-50" />
+                                <div className="w-1.5 h-3 bg-current animate-pulse ml-1 opacity-50" />
                             </button>
                         </Magnetic>
 

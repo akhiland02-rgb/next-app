@@ -49,8 +49,10 @@ export default function Header() {
                             <Terminal size={20} />
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-lg font-mono font-bold text-white leading-none tracking-tighter">ENTEECOM<span className="text-emerald-500 animate-pulse">_</span></span>
-                            <span className="text-[9px] font-mono text-zinc-500 leading-none mt-1">v2.0.4 [STABLE]</span>
+                            <h1 className="text-xl font-mono font-bold tracking-tighter text-white leading-none">
+                                ENTEECOM<span className="text-emerald-500">_</span>
+                            </h1>
+                            <span className="text-[9px] font-sans text-zinc-500 tracking-wider uppercase mt-1">Shopify Development Architecture</span>
                         </div>
                     </div>
 

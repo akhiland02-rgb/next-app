@@ -27,17 +27,20 @@ export default function Contact() {
                     viewport={{ once: true }}
                     className="flex flex-col items-center lg:items-start text-center lg:text-left"
                 >
-                    <motion.span variants={itemVariants} className="text-emerald-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
-                        &lt;Communication_Channels /&gt;
-                    </motion.span>
-                    <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-8 leading-tight tracking-tighter">
-                        Initialize <br /><span className="text-emerald-500">Project_Sequence.</span>
-                    </motion.h2>
-                    <motion.p variants={itemVariants} className="text-zinc-500 text-sm md:text-base mb-12 max-w-md leading-relaxed">
-            // Ready to engineer your vision?
-                        <br />
-            // Connect with our dev team directly.
-                    </motion.p>
+                    <motion.div variants={itemVariants} className="space-y-8">
+                        <div>
+                            <h2 className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-[0.4em] mb-4 flex items-center gap-2">
+                                <Terminal size={14} />
+                                [ESTABLISH_CONNECTION]
+                            </h2>
+                            <h3 className="text-4xl md:text-5xl font-mono font-bold text-white tracking-tighter mb-6 uppercase">
+                                Ready to <span className="text-emerald-500 italic">Deploy?</span>
+                            </h3>
+                            <p className="text-zinc-400 font-sans leading-relaxed max-w-md">
+                                Send us your project requirements and our architecture team will get back to you within 24 hours. No strings attached.
+                            </p>
+                        </div>
+                    </motion.div>
 
                     <div className="grid grid-cols-1 gap-4 w-full max-w-sm">
                         <motion.div variants={itemVariants} className="flex items-center gap-4 p-4 rounded border border-white/5 bg-white/5 hover:border-emerald-500/30 transition-all group cursor-pointer">
@@ -107,16 +110,16 @@ export default function Contact() {
                                     <textarea
                                         rows={3}
                                         placeholder="  return &quot;We need...&quot;"
-                                        className="w-full bg-transparent border-b border-zinc-800 py-2 text-zinc-300 focus:outline-none focus:border-emerald-500 transition-all resize-none placeholder:text-zinc-700 leading-relaxed"
-                                    ></textarea>
-                                    <div className="text-zinc-600 text-sm">&#125;</div>
+                                        className="w-full bg-black/40 border border-white/10 rounded p-4 text-emerald-400 text-sm font-sans focus:outline-none focus:border-emerald-500/50 transition-colors placeholder:text-zinc-700"
+                                    />
+                                    <label className="text-[10px] uppercase text-zinc-500 tracking-widest block">&#125;</label>
                                 </div>
 
                                 <div className="pt-6">
                                     <Magnetic>
-                                        <button className="w-full py-4 bg-emerald-600/10 border border-emerald-500/20 text-emerald-500 font-bold hover:bg-emerald-500 hover:text-black transition-all uppercase tracking-widest text-xs flex items-center justify-center gap-2 group">
-                                            <span>Submit_Query()</span>
-                                            <Send size={14} className="group-hover:translate-x-1 transition-transform" />
+                                        <button className="w-full py-5 bg-emerald-500 text-black font-mono font-bold rounded flex items-center justify-center gap-3 group hover:scale-[1.02] transition-all uppercase tracking-widest text-xs min-h-[56px] shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                                            <span>Transmit_Request()</span>
+                                            <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                         </button>
                                     </Magnetic>
                                 </div>

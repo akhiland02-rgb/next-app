@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Partners from "@/components/Partners";
 import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
@@ -27,6 +28,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col w-full">
         {/* HERO */}
         <Hero />
+        <Partners />
 
         {/* SECTIONS */}
         <div className="content-container">

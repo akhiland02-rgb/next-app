@@ -82,15 +82,15 @@ function TiltCard({ service }) {
                 <h3 className="text-xl font-bold text-white tracking-tight leading-tight group-hover:text-emerald-400 transition-colors">
                     {service.title}
                 </h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">
+                <p className="text-zinc-500 text-sm leading-relaxed font-sans">
                     {service.description}
                 </p>
             </div>
 
             <div style={{ transform: "translateZ(20px)" }} className="mt-8 border-t border-white/5 pt-4">
                 <Magnetic>
-                    <button className="text-[10px] font-bold text-zinc-400 hover:text-emerald-400 flex items-center justify-between w-full group/btn uppercase tracking-widest">
-                        <span>Execute()</span>
+                    <button className="text-[10px] font-bold text-zinc-400 hover:text-emerald-400 flex items-center justify-between w-full group/btn uppercase tracking-widest py-2">
+                        <span>Learn More</span>
                         <ArrowRight size={14} className="transition-transform group-hover/btn:translate-x-1" />
                     </button>
                 </Magnetic>

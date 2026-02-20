@@ -92,80 +92,86 @@ export default function Hero() {
 
                 <motion.p
                     variants={itemVariants}
-                    className="text-sm md:text-lg text-zinc-400 mb-12 max-w-2xl leading-relaxed font-mono px-4"
+                    className="text-base md:text-xl text-zinc-400 mb-12 max-w-2xl leading-relaxed font-sans px-4"
                 >
-          // Partner with Akhil Anand and the team at Enteecom to build your high-converting eCommerce store.
+                    Partner with Akhil Anand and the team at Enteecom to build your high-converting eCommerce store.
                 </motion.p>
 
                 {/* Stats Row */}
-                <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-8 md:gap-16 mb-16 w-full font-mono">
+                <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-8 md:gap-16 mb-20 w-full font-mono">
                     <div className="flex flex-col items-center group">
                         <div className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-none group-hover:text-emerald-400 transition-colors">20+</div>
-                        <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2">[PROJECTS_DEPLOYED]</div>
+                        <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2 px-2 py-0.5 border border-white/5 rounded">[PROJECTS_DEPLOYED]</div>
                     </div>
-                    <div className="hidden sm:block text-emerald-900/50">|</div>
+                    <div className="hidden sm:block text-emerald-900/50 opacity-30">|</div>
                     <div className="flex flex-col items-center group">
                         <div className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-none group-hover:text-emerald-400 transition-colors">2Cr+</div>
-                        <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2">[REVENUE_GENERATED]</div>
+                        <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2 px-2 py-0.5 border border-white/5 rounded">[REVENUE_GENERATED]</div>
                     </div>
-                    <div className="hidden sm:block text-emerald-900/50">|</div>
+                    <div className="hidden sm:block text-emerald-900/50 opacity-30">|</div>
                     <div className="flex flex-col items-center group">
                         <div className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-none group-hover:text-emerald-400 transition-colors">100%</div>
-                        <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2">[SUCCESS_RATE]</div>
+                        <div className="text-zinc-500 text-[10px] uppercase tracking-widest mt-2 px-2 py-0.5 border border-white/5 rounded">[SUCCESS_RATE]</div>
                     </div>
                 </motion.div>
 
                 {/* BUTTONS */}
-                <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-32 w-full">
+                <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-36 w-full">
                     <Magnetic>
-                        <button className="group relative flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600/10 text-emerald-400 font-mono font-bold rounded border border-emerald-500/50 overflow-hidden transition-all hover:bg-emerald-500 hover:text-black shadow-[0_0_20px_rgba(16,185,129,0.2)] uppercase tracking-widest text-xs">
-                            <span className="mr-2">&gt;</span>
+                        <button className="group relative flex items-center justify-center gap-3 px-10 py-5 bg-emerald-500 text-black font-mono font-bold rounded shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:scale-105 transition-all uppercase tracking-widest text-xs min-h-[56px] min-w-[240px]">
                             <span>Initialize_Launch()</span>
-                            <div className="w-2 h-4 bg-emerald-400 ml-2 animate-pulse" />
+                            <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                         </button>
                     </Magnetic>
 
-                    <button className="flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-zinc-400 font-mono font-bold rounded border border-white/10 hover:border-white/30 hover:text-white transition-all uppercase tracking-widest text-xs">
+                    <button className="flex items-center justify-center gap-3 px-10 py-5 bg-transparent text-white font-mono font-bold rounded border border-white/20 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all uppercase tracking-widest text-xs min-h-[56px] min-w-[240px]">
                         <span>view_source_code</span>
-                        <span className="text-[10px] opacity-50">(portfolio)</span>
+                        <Terminal size={14} className="opacity-50" />
                     </button>
                 </motion.div>
 
                 {/* Shopify Logo Section */}
                 <motion.div
                     style={{ scale: logoScale, opacity: logoOpacity, y: logoY }}
-                    className="relative z-10 flex flex-col items-center pb-20 w-full mt-12"
+                    className="relative z-10 flex flex-col items-center pb-24 w-full mt-16"
                 >
-                    <div className="text-zinc-600 text-[9px] font-mono uppercase tracking-[0.2em] mb-10 opacity-40">/* OFFICIAL_PARTNER_DETECTED */</div>
+                    <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-10 backdrop-blur-sm">
+                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                        <span className="text-zinc-400 text-[10px] font-mono uppercase tracking-[0.2em]">Official_Shopify_Partner_Verified</span>
+                    </div>
 
                     <div className="relative flex flex-col items-center">
                         <AnimatePresence>
                             {revealed && (
                                 <motion.div
                                     initial={{ opacity: 0, y: 15, scale: 0.9 }}
-                                    animate={{ opacity: 1, y: -40, scale: 1 }}
-                                    className="absolute top-0 z-30 bg-[#0a0a0a] border border-emerald-500/30 text-emerald-500 text-[10px] font-mono px-4 py-2 rounded flex items-center gap-3 shadow-2xl whitespace-nowrap uppercase"
+                                    animate={{ opacity: 1, y: -50, scale: 1 }}
+                                    className="absolute top-0 z-30 bg-[#1a1a1a] border border-emerald-500/50 text-emerald-400 text-[11px] font-mono px-5 py-2.5 rounded shadow-[0_10px_40px_rgba(0,0,0,0.5)] flex items-center gap-3 whitespace-nowrap uppercase tracking-wider"
                                 >
-                                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                                    <span>NEW_ORDER_RECEIVED: #{1000 + orders}</span>
+                                    <div className="flex gap-1">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                                    </div>
+                                    <span className="border-l border-white/10 pl-3">NEW_ORDER: #{1000 + orders}</span>
                                 </motion.div>
                             )}
                         </AnimatePresence>
 
                         <motion.div
                             animate={{
-                                filter: revealed ? "grayscale(0%) brightness(1.1)" : "grayscale(100%) brightness(50%)",
-                                scale: revealed ? 1.05 : 1
+                                filter: revealed ? "grayscale(0%) brightness(1.2)" : "grayscale(100%) brightness(50%)",
+                                scale: revealed ? 1.1 : 1
                             }}
-                            transition={{ duration: 0.5 }}
-                            className="relative"
+                            transition={{ duration: 0.8 }}
+                            className="relative px-12 py-6 bg-white/5 rounded-2xl border border-white/5 backdrop-blur-sm"
                         >
                             <Image
                                 src="https://cdn.worldvectorlogo.com/logos/shopify.svg"
                                 alt="Shopify Logo"
                                 width={220}
                                 height={60}
-                                className="w-[140px] md:w-[200px] h-auto opacity-80 hover:opacity-100 transition-opacity"
+                                className="w-[160px] md:w-[220px] h-auto transition-all"
                             />
                         </motion.div>
                     </div>
