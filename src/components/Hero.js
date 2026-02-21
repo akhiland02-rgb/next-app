@@ -81,15 +81,15 @@ export default function Hero() {
                         variants={itemVariants}
                         className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-8 leading-[1.1] text-white"
                     >
-                        Kerala&apos;s No.1 Experts for <br />
-                        <span className="text-emerald-500 italic font-sans">High-Performance Shopify Brands</span>
+                        We Build High-Converting <br />
+                        <span className="text-emerald-500 italic font-sans">Shopify Stores</span>
                     </motion.h1>
 
                     <motion.p
                         variants={itemVariants}
                         className="text-base md:text-xl text-zinc-400 mb-12 max-w-2xl leading-relaxed font-sans px-4"
                     >
-                        We build conversion-focused stores that scale. Partner with Enteecom for expert Shopify solutions designed for growth.
+                        Custom Store Setup, Theme Customization & Ecommerce Growth Solutions.
                     </motion.p>
 
                     <motion.div
@@ -122,18 +122,19 @@ export default function Hero() {
                         </div>
                     </motion.div>
 
-                    {/* SINGLE FOCUSED CTA */}
-                    <motion.div variants={itemVariants} className="flex flex-col items-center gap-6 justify-center mb-32 w-full font-mono uppercase tracking-[0.3em] text-[11px]">
+                    {/* MODERN AGENCY CTAs */}
+                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-24 w-full">
                         <Magnetic>
-                            <button className="group relative flex items-center justify-center gap-4 px-12 py-6 bg-transparent text-emerald-500 font-bold border-2 border-emerald-500 rounded shadow-[0_0_30px_rgba(16,185,129,0.2)] hover:bg-emerald-500 hover:text-black hover:shadow-[0_0_40px_rgba(16,185,129,0.4)] transition-all min-h-[64px] min-w-[320px]">
-                                <span>{">"} START_PROJECT()</span>
-                                <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                            <button className="group relative flex items-center justify-center gap-3 px-10 py-5 bg-emerald-500 text-black font-sans font-bold rounded-lg shadow-[0_10px_30px_rgba(16,185,129,0.3)] hover:scale-105 transition-all text-sm min-h-[60px] min-w-[220px]">
+                                <span>Get a Quote</span>
+                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </button>
                         </Magnetic>
-                        <div className="text-zinc-600 text-[9px] tracking-[0.4em] flex items-center gap-3">
-                            <div className="w-1 h-1 rounded-full bg-emerald-500 animate-ping" />
-                            Available for 2 new projects this month
-                        </div>
+
+                        <button className="flex items-center justify-center gap-3 px-10 py-5 bg-transparent text-white font-sans font-bold rounded-lg border border-white/20 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all text-sm min-h-[60px] min-w-[220px]">
+                            <span>Call Now</span>
+                            <ChevronRight size={18} className="opacity-50" />
+                        </button>
                     </motion.div>
                 </div>
 
