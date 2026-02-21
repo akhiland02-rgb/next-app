@@ -48,7 +48,7 @@ export default function Hero() {
     };
 
     return (
-        <section ref={containerRef} className="relative min-h-[160vh] w-full text-white pt-40 pb-20 overflow-hidden flex flex-col items-center">
+        <section ref={containerRef} className="relative min-h-screen w-full text-white pt-64 pb-12 overflow-hidden flex flex-col items-center">
             {/* Tech-Layer: Minimal Grid */}
             <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: `linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px)`, backgroundSize: '60px 60px' }}
@@ -58,7 +58,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0 bg-radial-gradient from-emerald-500/5 via-transparent to-transparent opacity-50 pointer-events-none" />
 
             <motion.div
-                className="relative z-20 flex flex-col items-center text-center max-w-5xl mx-auto px-6 mb-32"
+                className="relative z-20 flex flex-col items-center text-center max-w-5xl mx-auto px-6 mb-20"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -107,7 +107,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Shopify Section - Centered (Restored Animation Style) */}
-            <div className="relative flex flex-col items-center justify-center w-full mt-12 px-6">
+            <div className="relative flex flex-col items-center justify-center w-full mt-6 px-6">
 
                 {/* Sale Notification (OLX Style) - Adjusted for Centered Layout */}
                 <AnimatePresence>
